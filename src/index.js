@@ -1,4 +1,5 @@
 import './style.css';
+import './asset/ellipsisverticalsolid.svg';
 
 const container = document.querySelector('.container');
 
@@ -27,6 +28,8 @@ const populate = () => {
 
     const li = document.createElement('li');
     li.classList.add('list-item');
+    const horizontal = document.createElement('hr');
+    li.appendChild(horizontal);
 
     const box = document.createElement('input');
     box.setAttribute('type', 'checkbox');
@@ -34,7 +37,8 @@ const populate = () => {
     const title = document.createElement('span');
     title.classList.add('title');
     title.innerHTML = task.description;
-    const option = document.createElement('span');
+    const option = document.createElement('i');
+    // option.innerHTML = '+++';
     option.classList.add('option');
 
     wrapper.appendChild(li);
@@ -43,4 +47,3 @@ const populate = () => {
   });
 };
 populate();
-console.log('hello world');
