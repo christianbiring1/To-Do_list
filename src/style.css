@@ -27,19 +27,23 @@ body {
 }
 
 .top {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .top span {
-  padding: 10px 0;
-  font-weight: 300;
+  display: inline-block;
+  padding: 20px 10px;
+  font-weight: 400;
   font-size: 20px;
 }
 
 .reset {
-  background: url(./asset/arrowsturntodotssolid.svg) center no-repeat;
+  background: url(./asset/arrowsrotatesolid.svg) center no-repeat;
+}
+
+.input-text {
+  display: grid;
+  grid-template-columns: 80% 20%;
 }
 
 input {
@@ -47,12 +51,19 @@ input {
   border: none;
   font-style: italic;
   font-size: 18px;
+  display: inline;
 }
 
 input:focus {
   border: none;
   outline: none;
   font-style: italic;
+}
+
+.add {
+  background: url(./asset/arrowsturntodotssolid.svg) center no-repeat;
+  float: none;
+  margin-right: 10px;
 }
 
 .wrapper {
@@ -80,6 +91,11 @@ i {
   width: 50px;
   height: 20px;
   margin: 20px auto;
+  opacity: 0.4;
+}
+
+i:hover {
+  cursor: move;
 }
 
 .option {
@@ -98,4 +114,16 @@ i {
   color: #000;
   text-decoration: none;
   padding: 10px;
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    width: 60%;
+  }
+
+  .input-text {
+    display: grid;
+    grid-template-columns: 92% 8%;
+  }
 }
