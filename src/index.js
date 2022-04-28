@@ -38,7 +38,6 @@ const populate = () => {
     title.classList.add('title');
     title.innerHTML = task.description;
     const option = document.createElement('i');
-    // option.innerHTML = '+++';
     option.classList.add('option');
 
     wrapper.appendChild(li);
