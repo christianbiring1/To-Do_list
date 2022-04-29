@@ -13,10 +13,7 @@ body {
 
 .main {
   width: 80%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  margin: 5rem auto;
   box-shadow: 5px 5px 5px gray, 5px -5px 5px gray;
   background-color: #fff;
 }
@@ -99,7 +96,7 @@ i:hover {
 }
 
 .option {
-  background: url(./asset/ellipsisverticalsolid.svg) center no-repeat;
+  background: url(./asset/trashsolid.svg) center no-repeat;
 }
 
 .foot {
