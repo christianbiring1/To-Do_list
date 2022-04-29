@@ -3,24 +3,17 @@ import './asset/ellipsisverticalsolid.svg';
 
 const container = document.querySelector('.container');
 
-const tasks = [
-  {
-    description: 'Finish up the project',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Start new project',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Joggling',
-    completed: false,
-    index: 3,
-  },
-];
+class Task {
+  constructor(description, completed, index) {
+    this.description = description,
+    this.completed = false,
+    this.index = index
+  }
+};
 
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+/* ---------- Populate tasks on the page ---------- */
 const populate = () => {
   tasks.forEach((task) => {
     const wrapper = document.createElement('ul');
