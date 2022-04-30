@@ -21,6 +21,8 @@ export function clearfield() {
   input.value = '';
 }
 
+/* Interactiveness with the page. user can check the box on the task he/she just complete */
+
 export function checkTasks() {
   const box = document.querySelectorAll('.checkbox');
   box.forEach((box) => {
@@ -34,18 +36,16 @@ export function checkTasks() {
             tasks[i].completed = true;
 
             localStorage.setItem('tasks', JSON.stringify(tasks));
-            console.log(tasks);
           }
         }
-      }
-
-      taskchecked.style.color = 'black';
-      taskchecked.style.textDecoration = 'none';
-      for (let i = 0; i < tasks.length; i += 1) {
-        if (tasks[i].description === taskchecked.textContent) {
-          tasks[i].completed = false;
-          localStorage.setItem('tasks', JSON.stringify(tasks));
-          console.log(tasks);
+      } else {
+        taskchecked.style.color = 'black';
+        taskchecked.style.textDecoration = 'none';
+        for (let i = 0; i < tasks.length; i += 1) {
+          if (tasks[i].description === taskchecked.textContent) {
+            tasks[i].completed = false;
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+          }
         }
       }
     });
@@ -54,11 +54,14 @@ export function checkTasks() {
 
 checkTasks();
 
-function clearAll() {
+/* User can Delete the checked task */
+
+export function clearAll() {
   const clear = document.querySelector('.clear');
   clear.addEventListener('click', () => {
     tasks = tasks.filter((task) => task.completed !== true);
-    console.log(tasks);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    window.location.reload(true);
   });
 }
 

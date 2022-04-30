@@ -1,4 +1,6 @@
-import deleteTask, { clearfield, tasks, checkTasks } from './delete.js';
+import deleteTask, {
+  clearfield, tasks, checkTasks, clearAll,
+} from './delete.js';
 
 // import checkTasks from './interactive.js';
 
@@ -50,6 +52,7 @@ export function addTask() {
     tasks.push(task);
     deleteTask();
     checkTasks();
+    clearAll();
     return localStorage.setItem('tasks', JSON.stringify(tasks));
   });
 }
