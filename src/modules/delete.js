@@ -1,4 +1,5 @@
 /* eslint-disable import/no-mutable-exports */
+
 export let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 export default function deleteTask() {

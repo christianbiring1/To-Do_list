@@ -1,5 +1,4 @@
-import deleteTask, { clearfield } from './delete.js';
-// import { clearfield } from './delete.js';
+import deleteTask, { clearfield, tasks } from './delete.js';
 
 const container = document.querySelector('.container');
 export default class Task {
@@ -10,7 +9,6 @@ export default class Task {
   }
 }
 
-export const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 /* ---------Populate tasks on the page -----------*/
 
 export const populate = (task) => {
