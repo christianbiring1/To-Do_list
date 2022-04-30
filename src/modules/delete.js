@@ -54,12 +54,12 @@ export function checkTasks() {
 
 checkTasks();
 
-// function clearAll() {
-//   const clear = document.querySelector('.clear');
-//   clear.addEventListener('click', () => {
-//     tasks = tasks.filter((task) => task.completed !== true);
-//     console.log(tasks);
-//   });
-// }
+function clearAll() {
+  const clear = document.querySelector('.clear');
+  clear.addEventListener('click', () => {
+    tasks = tasks.filter((task) => task.completed !== true);
+    console.log(tasks);
+  });
+}
 
-// clearAll();
+clearAll();
