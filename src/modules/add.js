@@ -14,10 +14,10 @@ export const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 /* ---------Populate tasks on the page -----------*/
 
 export const populate = (task) => {
-  const wrapper = document.createElement('ul');
+  const wrapper = document.createElement('div');
   wrapper.classList.add('wrapper');
 
-  const li = document.createElement('li');
+  const li = document.createElement('p');
   li.classList.add('list-item');
   const horizontal = document.createElement('hr');
   li.appendChild(horizontal);
