@@ -1,4 +1,6 @@
-import deleteTask, { clearfield, tasks } from './delete.js';
+import deleteTask, { clearfield, tasks, checkTasks } from './delete.js';
+
+// import checkTasks from './interactive.js';
 
 const container = document.querySelector('.container');
 export default class Task {
@@ -22,6 +24,7 @@ export const populate = (task) => {
 
   const box = document.createElement('input');
   box.setAttribute('type', 'checkbox');
+  box.classList.add('checkbox');
   const title = document.createElement('span');
   title.classList.add('title');
   title.innerHTML = task.description;
@@ -46,6 +49,7 @@ export function addTask() {
     clearfield();
     tasks.push(task);
     deleteTask();
+    checkTasks();
     return localStorage.setItem('tasks', JSON.stringify(tasks));
   });
 }
@@ -57,3 +61,4 @@ tasks.forEach((task) => {
 });
 
 deleteTask();
+checkTasks();
