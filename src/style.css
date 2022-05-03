@@ -63,6 +63,11 @@ input:focus {
   margin-right: 10px;
 }
 
+.add:hover,
+.reset:hover {
+  cursor: pointer;
+}
+
 .wrapper {
   padding: 0;
   margin-left: 10px;
